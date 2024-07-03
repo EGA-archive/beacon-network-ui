@@ -36,9 +36,9 @@ function TableResultsIndividuals (props) {
   const [isOpenModal2, setIsOpenModal2] = useState(false)
 
   const [filterValues, setFilterValues] = useState({
+    Beacon: '',
     IndividualId: '',
     ethnicity: '',
-    Beacon: '',
     interventionsOrProcedures: '',
     sex: '',
     diseases: '',
@@ -57,10 +57,7 @@ function TableResultsIndividuals (props) {
     if (beaconId === 'org.progenetix') {
       beaconId = 'org.progenetix.beacon'
     }
-    beaconsList.forEach(element => {
-      console.log(element.id)
-    })
-
+ 
     const beacon = beaconsList.find(b => (b.response?.id ?? b.id) === beaconId)
 
     if (beacon) {
@@ -75,9 +72,9 @@ function TableResultsIndividuals (props) {
   }
 
   const [columnVisibility, setColumnVisibility] = useState({
+    Beacon: true,
     IndividualId: true,
     ethnicity: true,
-    Beacon: true,
     interventionsOrProcedures: true,
     sex: true,
     diseases: true,
@@ -262,7 +259,6 @@ function TableResultsIndividuals (props) {
     document.body.removeChild(link)
   }
 
- 
   const handleShowCrossQuery = e => {
     setShowCrossQuery(true)
 
@@ -284,6 +280,7 @@ function TableResultsIndividuals (props) {
 
   useEffect(() => {
     if (props.show === 'full') {
+   
       setResultsSelectedFinal(resultsSelected)
       setShowResults(true)
       setShowDatasets(false)
@@ -296,9 +293,10 @@ function TableResultsIndividuals (props) {
     resultsSelected.forEach((element, index) => {
       arrayBeaconsIds.push(element[0])
     })
-
+  
     resultsSelectedFinal.forEach((element, index) => {
-      if (element[1] !== undefined && element[1]._id) {
+     
+      if (element[1] !== undefined && (element[1]._id || element[1].id)) {
         let eth_id = ''
         let eth_label = ''
         let stringEth = ''
@@ -318,7 +316,7 @@ function TableResultsIndividuals (props) {
         let sex_label = ''
         let stringSex = ''
 
-        if (element[1].sex !== '') {
+        if (element[1].sex) {
           sex_id = element[1].sex.id
           sex_label = element[1].sex.label
           stringSex = `${element[1].sex.label} / ${element[1].sex.id}`
@@ -648,7 +646,7 @@ function TableResultsIndividuals (props) {
                                     {beacon.response.name}
                                   </td>
                                 )}
-                                 {!beacon.response && (
+                                {!beacon.response && (
                                   <td className='tdGranuBeacon tdNotFoundDataset'>
                                     {beacon.name}
                                   </td>
@@ -725,6 +723,21 @@ function TableResultsIndividuals (props) {
                   <tr>
                     <th
                       className={`sticky-header ${
+                        columnVisibility.Beacon ? 'visible' : 'hidden'
+                      }`}
+                    >
+                      <span>Beacon</span>
+                      <button onClick={() => toggleColumnVisibility('Beacon')}>
+                        {columnVisibility.Beacon ? <FaEye /> : <FaEyeSlash />}
+                      </button>
+                      <input
+                        type='text'
+                        placeholder='Filter Beacon'
+                        onChange={e => handleFilterChange(e, 'Beacon')}
+                      />
+                    </th>
+                    <th
+                      className={`sticky-header ${
                         columnVisibility.IndividualId ? 'visible' : 'hidden'
                       }`}
                     >
@@ -765,21 +778,7 @@ function TableResultsIndividuals (props) {
                         onChange={e => handleFilterChange(e, 'ethnicity')}
                       />
                     </th>
-                    <th
-                      className={`sticky-header ${
-                        columnVisibility.Beacon ? 'visible' : 'hidden'
-                      }`}
-                    >
-                      <span>Beacon</span>
-                      <button onClick={() => toggleColumnVisibility('Beacon')}>
-                        {columnVisibility.Beacon ? <FaEye /> : <FaEyeSlash />}
-                      </button>
-                      <input
-                        type='text'
-                        placeholder='Filter Beacon'
-                        onChange={e => handleFilterChange(e, 'Beacon')}
-                      />
-                    </th>
+
                     <th
                       className={`sticky-header ${
                         columnVisibility.interventionsOrProcedures
@@ -900,6 +899,13 @@ function TableResultsIndividuals (props) {
                     <tr key={index}>
                       <td
                         className={
+                          columnVisibility.Beacon ? 'visible' : 'hidden'
+                        }
+                      >
+                        {row.Beacon}
+                      </td>
+                      <td
+                        className={
                           columnVisibility.IndividualId
                             ? 'visible-id'
                             : 'hidden'
@@ -923,13 +929,7 @@ function TableResultsIndividuals (props) {
                       >
                         {row.ethnicity}
                       </td>
-                      <td
-                        className={
-                          columnVisibility.Beacon ? 'visible' : 'hidden'
-                        }
-                      >
-                        {row.Beacon}
-                      </td>
+
                       <td
                         className={
                           columnVisibility.interventionsOrProcedures
