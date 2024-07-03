@@ -9,7 +9,7 @@
               "value": "Colon adenocarcinoma",
               "ontology": "NCIT:C4349",
               "type": "ontology",
-              "schemaField": "diseases"
+              "schemaField": "diseases.diseaseCode"
             }
           ],
           [
@@ -18,7 +18,7 @@
               "value": "Mucinous Adenocarcinoma of the Colon and Rectum",
               "ontology": "NCIT:C7966",
               "type": "ontology",
-              "schemaField": "diseases"
+              "schemaField": "diseases.diseaseCode"
             }
           ],
           [
@@ -27,7 +27,7 @@
               "value": "Rectal Adenocarcinoma",
               "ontology": "NCIT:C9383",
               "type": "ontology",
-              "schemaField": "diseases"
+              "schemaField": "diseases.diseaseCode"
             }
           ]
         ]
