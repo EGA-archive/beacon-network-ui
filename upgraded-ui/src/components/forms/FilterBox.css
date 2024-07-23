@@ -1,0 +1,109 @@
+/* components/FilterBox.css */
+.filter-box {
+  width: 338px;
+  min-height: 617px;
+  background: white;
+  padding: 16px;
+  box-shadow: 0px 8px 11px 0px rgba(155, 160, 171, 0.14);
+  border-radius: 10px;
+  margin-bottom: 95px;
+}
+
+.filter-box h2 {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+.filter-box h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 32px;
+  height: 24px;
+}
+
+.filter-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-box li {
+  cursor: pointer;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  border-bottom: 1px solid var(--navbar-bg-color);
+  height: fit-content;
+  font-weight: 700;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-box li .icon {
+  font-size: 21px;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.filter-box li .icon.open {
+  font-size: 25px;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.icon-filtering-terms {
+  font-size: 18px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.term-details {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: 1px solid var(--navbar-bg-color);
+  border-radius: 8px;
+  background-color: var(--red-pink-color);
+  font-size: 12px;
+  height: 32px;
+  font-weight: 500;
+  width: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-variant {
+  border: 1px solid var(--grey-dark-color);
+  border-radius: 8px;
+  background-color: var(--grey-light-color);
+  font-size: 12px;
+  padding: 6px 8px 6px 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.filter-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  color: var(--navbar-bg-color);
+  border: 1px solid var(--pink-color);
+  border-radius: 100px;
+  height: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: white;
+  width: 180px;
+  margin-top: 48px;
+  display: flex;
+  margin-left: 150px;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,58 @@
+/* Navbar.css */
+.navBar {
+  padding: 10px;
+  align-items: center;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.navBar div {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 10px 16px 10px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.navBar a:hover {
+  background-color: var(--navbar-hover-color);
+}
+
+.la-marato-logo {
+  width: 140px;
+}
+
+.beacon-title {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 10px 16px 10px 16px;
+  font-size: 16px;
+}
+
+.log-in a {
+  border: 1px solid white;
+  padding: 6px 10px 6px 10px;
+  border-radius: 6px;
+  width: 92px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in svg{
+  font-size: 22px;
+  margin-right: 4px;
+}
