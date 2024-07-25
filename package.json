@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
+  }
+}
