@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import FilterBox from './components/forms/FilterBox'
 import StateBeacons from './components/forms/StateBecons'
+import Footer from './components/layout/Footer'
 import './App.css'
 
 const App: React.FC = () => {
@@ -19,8 +20,8 @@ const App: React.FC = () => {
               rel='noreferrer'
             >
               <img
-                className='la-marato-logo'
-                src='../la-marato-logo.png'
+                className='la-marato-logo-grey'
+                src='../lamarato-logo-grey.png'
                 alt='laMaratoLogo'
               ></img>
             </a>
@@ -32,7 +33,7 @@ const App: React.FC = () => {
             >
               <img
                 className='ICS-logo'
-                src='../ICS-logo.png'
+                src='../ICS-logo-grey.png'
                 alt='ICSLogo'
               ></img>
             </a>
@@ -44,7 +45,7 @@ const App: React.FC = () => {
             >
               <img
                 className='caixa-logo'
-                src='../caixa-logo.png'
+                src='../caixa-logo-grey.png'
                 alt='caixaLogo'
               ></img>
             </a>
@@ -69,6 +70,7 @@ const App: React.FC = () => {
           <Route path='/' element={<div></div>} />
         </Routes>
       </div>
+      <Footer/>
     </div>
   )
 }

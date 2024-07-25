@@ -17,14 +17,18 @@
 }
 
 .ICS-logo {
-  height: 23px;
+  height: 26px;
   margin-left: 20px;
 }
 
 .caixa-logo {
-  height: 32px;
+  height: 25px;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.la-marato-logo-grey{
+  height: 30px;
 }
 
 .content-container {
@@ -47,7 +51,7 @@
   box-shadow: 0px 47px 13px 0px rgba(155, 160, 171, 0);
   background-color: white;
   border-radius: 10px;
-  padding: 24px 32px 24px 32px;
+  padding: 24px 24px 24px 24px;
   margin-left: 32px;
 }
 
@@ -60,7 +64,7 @@
   box-shadow: 0px 47px 13px 0px rgba(155, 160, 171, 0);
   background-color: white;
   border-radius: 10px;
-  padding: 24px 32px 24px 32px;
+  padding: 24px 24px 24px 24px;
   margin-left: 32px;
   margin-top: 32px;
 }

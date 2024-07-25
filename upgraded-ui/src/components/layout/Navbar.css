@@ -1,6 +1,6 @@
 /* Navbar.css */
 .navBar {
-  padding: 10px;
+  padding: 0px 72px 0px 72px;
   align-items: center;
   background-color: var(--navbar-bg-color);
   display: flex;
@@ -15,16 +15,59 @@
   align-items: center;
 }
 
-.navBar a {
+.home a{
+  width: 50px;;
   color: var(--navbar-text-color);
   text-decoration: none;
-  padding: 10px 16px 10px 16px;
+  padding: 7px 16px 7px 16px;
   font-size: 16px;
   border-radius: 4px;
-  height: 36px;
+  height: 28px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
+
+
+.network-members a {
+  width: 140px;
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 7px 16px 7px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about a{
+  width: 50px;
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 7px 16px 7px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact a{
+  width: 50px;
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 7px 16px 7px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .navBar a:hover {
   background-color: var(--navbar-hover-color);
@@ -42,17 +85,38 @@
 }
 
 .log-in a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 7px 16px 7px 16px;
   border: 1px solid white;
-  padding: 6px 10px 6px 10px;
   border-radius: 6px;
-  width: 92px;
-  height: 30px;
+  height: 28px;
+  width: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.log-in svg{
+.log-in svg {
   font-size: 22px;
   margin-right: 4px;
+}
+
+.active a {
+  background-color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.active a {
+  color: var(--navbar-bg-color);
+}
+
+.active a:hover {
+  background-color: white;
 }

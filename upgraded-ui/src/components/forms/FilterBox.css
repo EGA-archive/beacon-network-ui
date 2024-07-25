@@ -3,7 +3,7 @@
   width: 338px;
   min-height: 617px;
   background: white;
-  padding: 16px;
+  padding: 24px 24px 24px 24px;
   box-shadow: 0px 8px 11px 0px rgba(155, 160, 171, 0.14);
   border-radius: 10px;
   margin-bottom: 95px;
@@ -46,7 +46,7 @@
 }
 
 .filter-box li .icon.open {
-  font-size: 25px;
+  font-size: 21px;
   margin-top: 9px;
   margin-left: 10px;
 }
@@ -68,12 +68,13 @@
   border-radius: 8px;
   background-color: var(--red-pink-color);
   font-size: 12px;
-  height: 32px;
+  min-height: 32px;
   font-weight: 500;
-  width: 57px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .tag-variant {
@@ -84,9 +85,17 @@
   padding: 6px 8px 6px 8px;
   font-weight: 500;
   display: flex;
+  line-height: 1.5;
   align-items: center;
   justify-content: center;
-  height: 20px;
+}
+
+.tag:hover {
+  background-color: var(--pink-tag-hover-color);
+}
+
+.tag-variant:hover {
+  background-color: var(--grey-tag-hover-color);
 }
 
 .filter-button {
