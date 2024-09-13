@@ -31,3 +31,23 @@
   /* height: 100%; */
   flex-wrap: wrap;
 }
+
+
+.suggestions-box {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestions-box li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions-box li:hover {
+  background-color: #f8f8f8;
+}

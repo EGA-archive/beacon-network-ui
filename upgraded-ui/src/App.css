@@ -47,7 +47,6 @@
 }
 
 .search-box {
-  height: 347px;
   box-shadow: 0px 47px 13px 0px rgba(155, 160, 171, 0);
   background-color: white;
   border-radius: 10px;
@@ -60,7 +59,7 @@
 }
 
 .members-box {
-  height: 175px;
+  height: 236px;
   box-shadow: 0px 47px 13px 0px rgba(155, 160, 171, 0);
   background-color: white;
   border-radius: 10px;

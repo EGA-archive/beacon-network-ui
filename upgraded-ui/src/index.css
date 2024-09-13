@@ -1,8 +1,9 @@
 :root {
-  --navbar-bg-color: #902b43; /* Replace with your value */
-  --navbar-text-color: #ffffff; /* Replace with your value */
-  --navbar-hover-color: #BD4662; /* Replace with your value */
+  --navbar-bg-color: #902b43;
+  --navbar-text-color: #ffffff;
+  --navbar-hover-color: #bd4662;
   --red-pink-color: #fff5f7;
+  --pink-color-button: #bd99a1;
   --pink-color: #fde8ed;
   --pink-tag-hover-color: rgba(255, 229, 235, 1);
   --grey-tag-hover-color: rgba(229, 229, 229, 1);
@@ -10,7 +11,15 @@
   --grey-dark-color: #7d7d7d;
   --green-validated-color: rgba(105, 193, 98, 1);
   --dark-blue-color: rgba(39, 56, 71, 1);
+  --grey-border-color: #acacac;
+  --suggestion-box-border: #ccc;
+  --suggestion-box-hover-bg: #f8f8f8;
+  --applied-tag-bg: #f0f0f0;
+  --search-button-bg: #900d3e;
+  --row-background-color: rgba(144, 43, 67, 0.2);
+  --row-border-bottom-color: #902b43; 
 }
+
 
 body {
   margin: 0;

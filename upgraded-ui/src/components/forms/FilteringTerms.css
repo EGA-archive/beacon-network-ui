@@ -1,0 +1,134 @@
+.filtering-terms {
+  width: 920px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid var(--navbar-bg-color);
+  border-radius: 20px;
+  width: 300px;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Allow horizontal scroll */
+  width: 100%;
+}
+
+.filtering-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Table layout is fixed to avoid table from auto-resizing */
+  font-size: 13px; /* Set font size for table */
+}
+
+.filtering-table th,
+.filtering-table td {
+  padding: 10px;
+  margin-right: 20px;
+  height: 49px;
+  text-align: left;
+  border-bottom: 1px solid var(--grey-border-color);
+  font-size: 13px; /* Ensure consistent font size */
+}
+
+.filtering-table th {
+  background-color: var(--row-background-color); /* Set header background */
+  font-weight: bold;
+  color: var(--navbar-bg-color); /* Text color from Figma */
+  border-bottom: 1px solid var(--row-border-bottom-color); /* Apply bottom border */
+}
+
+.filtering-table td {
+  white-space: nowrap;
+  background-color: var(--pink-color);
+  overflow-x: scroll;
+  border-bottom: 1px solid var(--row-border-bottom-color);
+}
+
+.filtering-table th:nth-child(1),
+.filtering-table td:nth-child(1) {
+    width: 12px;
+}
+
+.filtering-table th:nth-child(2),
+.filtering-table td:nth-child(2) {
+  width: 300px; /* Fixed width for ID column */
+}
+
+.filtering-table th:nth-child(3),
+.filtering-table td:nth-child(3) {
+  width: 250px; /* Fixed width for Label column */
+}
+
+.filtering-table th:nth-child(4),
+.filtering-table td:nth-child(4) {
+  width: 300px; /* Fixed width for Scope column */
+  white-space: nowrap; /* Prevents scope from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: var(--navbar-bg-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: var(--grey-dark-color);
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+}
+
+/* Table Hover Effect */
+.filtering-table tbody tr:hover {
+  background-color: var(--pink-tag-hover-color); /* Row hover background */
+}
+
+/* Checkbox alignment */
+.filtering-table td input[type='checkbox'] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.filtering-terms-box {
+  box-shadow: 0px 47px 13px 0px rgba(155, 160, 171, 0);
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px 24px 24px 24px;
+  margin-left: 32px;
+  margin-top: 30px;
+  margin-bottom: 95px;
+}
+
+.filtering-terms-box h2 {
+  font-size: 16px;
+  width: 158px;
+}
