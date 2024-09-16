@@ -1,29 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import configData from './../../config.json';
 import './Navbar.css';
 import { GoPerson } from 'react-icons/go';
 
-const Navbar: React.FC = () => {
-  const [isNetwork, setIsNetwork] = useState(false);
+interface NavbarProps {
+  isNetwork: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isNetwork }) => {
   const location = useLocation();
-
-  useEffect(() => {
-    const apiCall = async () => {
-      try {
-        let res = await axios.get(configData.API_URL + '/info');
-
-        if (res.data.meta.isAggregated) {
-          setIsNetwork(true);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    apiCall();
-  }, []);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -42,14 +28,14 @@ const Navbar: React.FC = () => {
             alt='la-marato-logo'
           ></img>
         </a>
-        <h1 className='beacon-title'>Beacon network</h1>
+        <h1 className='beacon-title'>Beacon Network</h1>
       </div>
       <div className='module2'>
         <div className={`home ${isActive('/') ? 'active' : ''}`}>
           <Link to='/'>Home</Link>
         </div>
         <div className={`network-members ${isActive('/network-members') ? 'active' : ''}`}>
-          <Link to='/network-members'>Network members</Link>
+          <Link to='/network-members'>{isNetwork ? 'Network Members' : 'Beacon Info'}</Link>
         </div>
         <div className={`about ${isActive('/about') ? 'active' : ''}`}>
           <Link to='/about'>About</Link>

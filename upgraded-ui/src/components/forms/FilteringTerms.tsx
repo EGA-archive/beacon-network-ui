@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './FilteringTerms.css'
+import configData from '../../config.json';
 
 interface FilteringTerm {
   id: string
@@ -30,7 +31,7 @@ const FilteringTerms: React.FC<FilteringTermsProps> = ({
     const fetchFilteringTerms = async () => {
       try {
         const res = await axios.get(
-          'https://beacon-network-backend-test.ega-archive.org/beacon-network/v2.0.0/filtering_terms'
+          configData.API_URL + '/filtering_terms'
         )
         setFilteringTerms(res.data.response.filteringTerms)
       } catch (error) {

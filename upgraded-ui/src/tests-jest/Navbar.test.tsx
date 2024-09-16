@@ -10,7 +10,7 @@ describe('Navbar component', () => {
   it('renders all navigation links', () => {
     const { getByText } = render(
       <Router>
-        <Navbar />
+        <Navbar isNetwork={false} />
       </Router>
     );
 
